@@ -1,42 +1,35 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <title>Login</title>
+    <title>Sign up | Smart Login System</title>
 </head>
-
 <body>
-    <span class="d-none" id="username"></span>
+    <main class="container my-5 text-center">
+        <form id="signupForm" class="group m-auto p-4 p-md-5" novalidate>
+            <h1 class="mb-4">Smart Login System</h1>
 
-    <div class="container my-5 text-center">
-        <div class="group m-auto w-75 p-5">
-            <h1>Smart Login System</h1>
+            <label class="visually-hidden" for="signupName">Name</label>
+            <input id="signupName" class="form-control my-3" placeholder="Enter your name" type="text" autocomplete="name">
 
-            <input id="signupName" class="form-control my-3" placeholder="Enter your name" type="text">
-            <input id="signupEmail" class="form-control my-3" placeholder="Enter your email" type="email">
+            <label class="visually-hidden" for="signupEmail">Email</label>
+            <input id="signupEmail" class="form-control my-3" placeholder="Enter your email" type="email" autocomplete="email">
 
-            <input id="signupPassword" class="form-control my-3" placeholder="Enter  password" type="password">
-            <p id="exist"></p>
+            <label class="visually-hidden" for="signupPassword">Password</label>
+            <input id="signupPassword" class="form-control my-3" placeholder="Enter password (at least 6 characters)" type="password" autocomplete="new-password">
 
-            <button onclick="signUp()" class="btn btn-outline-info w-100 my-3">Sign Up</button>
-            <p class="text-white">You have an account? <a class='text-white' href='/index.html'>Signin</a></p>
-        </div>
-    </div>
+            <p id="exist" class="msg" role="alert"></p>
 
-
-
-
-
-
-
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+            <button type="submit" class="btn btn-outline-info w-100 my-3">Sign up</button>
+            <p class="text-white mb-0">Already have an account? <a class="text-white" href="index.html">Sign in</a></p>
+        </form>
+    </main>
     <script src="js/index.js"></script>
 </body>
-
 </html>
